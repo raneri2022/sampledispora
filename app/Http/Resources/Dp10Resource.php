@@ -14,6 +14,8 @@ class Dp10Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+            return [
+            'fixed_telephone_number'=>$this->dp10002,
+        ];
     }
 }

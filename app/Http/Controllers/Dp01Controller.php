@@ -6,6 +6,8 @@ use App\Http\Requests\StoreDp01Request;
 use App\Http\Requests\UpdateDp01Request;
 use App\Models\Dp01;
 
+use App\Http\Resources\Dp01Resource;
+
 class Dp01Controller extends Controller
 {
     /**
@@ -16,7 +18,7 @@ class Dp01Controller extends Controller
     public function index()
     {
         //
-        
+        return Dp01Resource::collection(Dp01::get());
     }
 
     /**

@@ -14,6 +14,10 @@ class Dp30Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+          return [
+            'type_of_wealthy_property'=>$this->fname30002->refd_13002,
+            'property_name'=>$this->dp30003,
+            'property_in_number'=>$this->dp30004,
+        ];
     }
 }

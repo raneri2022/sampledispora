@@ -6,6 +6,8 @@ use App\Http\Requests\StoreDp04Request;
 use App\Http\Requests\UpdateDp04Request;
 use App\Models\Dp04;
 
+use App\Http\Resources\Dp04Resource;
+
 class Dp04Controller extends Controller
 {
     /**
@@ -16,6 +18,7 @@ class Dp04Controller extends Controller
     public function index()
     {
         //
+         return Dp04Resource::collection(Dp04::get());
     }
 
     /**

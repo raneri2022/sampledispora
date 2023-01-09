@@ -14,6 +14,9 @@ class Dp21Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+          return [
+            'skill_name'=>$this->dp21002,
+            'experience_in_years'=>$this->dp21003,
+        ];
     }
 }

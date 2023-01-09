@@ -14,6 +14,13 @@ class Dp15Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+           return [
+            'f_name_relative'=>$this->dp15002,
+            'm_name_relative'=>$this->dp15003,
+            'l_name_relative'=>$this->dp15004,
+            'zoba_name_relative'=>$this->fname15005->refd_03002,
+            'city_village_name'=>$this->dp15006,
+            'relative_relationship'=>$this->fname15007->refd_04002,
+        ];
     }
 }

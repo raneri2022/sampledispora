@@ -26,7 +26,7 @@ class Refd15Seeder extends Seeder
                 ['refd_15002' => "Bilen"],
                 ['refd_15002' => "Afar"],
                 ['refd_15002' => "Hdarb"],
-                ['refd_15002' => "Other Eithicity"],
+                ['refd_15002' => "Other"],
 
             ))->create();
     }

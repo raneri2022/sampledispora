@@ -17,12 +17,12 @@ class Refd10Seeder extends Seeder
     {
         //
               //
-              Refd10::factory(8)->state(new sequence(
+              Refd10::factory(3)->state(new sequence(
                 ['refd_10002' => "Earned Income"],
                 ['refd_10002' => "Family Member Income "],
                 ['refd_10002' => "Govermental Aid"],
-             
-        
+
+
             ))->create();
     }
 }

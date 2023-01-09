@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Dp36;
 use App\Http\Requests\StoreDp36Request;
 use App\Http\Requests\UpdateDp36Request;
+use App\Http\Resources\Dp36Resource;
 
 class Dp36Controller extends Controller
 {
@@ -16,6 +17,7 @@ class Dp36Controller extends Controller
     public function index()
     {
         //
+         return Dp36Resource::collection(Dp36::get());
     }
 
     /**

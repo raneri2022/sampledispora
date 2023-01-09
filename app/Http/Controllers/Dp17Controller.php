@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreDp17Request;
 use App\Http\Requests\UpdateDp17Request;
 use App\Models\Dp17;
-
+use App\Http\Resources\Dp17Resource;
 class Dp17Controller extends Controller
 {
     /**
@@ -16,6 +16,7 @@ class Dp17Controller extends Controller
     public function index()
     {
         //
+         return Dp17Resource::collection(Dp17::get());
     }
 
     /**

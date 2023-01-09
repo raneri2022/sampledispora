@@ -14,6 +14,10 @@ class Dp05Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'nationality'=>$this->whenNotNull($this->countryName->name),
+            'nationality_id' => $this->dp06->dp06002,
+            'possport_id' => $this->dp07->dp07002,
+        ];
     }
 }

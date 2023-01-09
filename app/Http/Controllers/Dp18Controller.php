@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreDp18Request;
 use App\Http\Requests\UpdateDp18Request;
 use App\Models\Dp18;
+use App\Http\Resources\Dp18Resource;
 
 class Dp18Controller extends Controller
 {
@@ -16,6 +17,7 @@ class Dp18Controller extends Controller
     public function index()
     {
         //
+         return Dp18Resource::collection(Dp18::get());
     }
 
     /**

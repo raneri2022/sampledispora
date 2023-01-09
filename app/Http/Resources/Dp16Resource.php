@@ -14,6 +14,12 @@ class Dp16Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+           return [
+            'language_name'=>$this->dp16002,
+            'read'=>$this->dp16003,
+            'write'=>$this->dp16004,
+            'speak'=>$this->dp16005,
+            'listen'=>$this->dp16006,
+        ];
     }
 }

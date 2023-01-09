@@ -14,6 +14,8 @@ class Dp37Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+         return [
+            'emigrated_yes_or_no'=>$this->dp37002,
+        ];
     }
 }

@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Dp35 extends Model
 {
     use HasFactory;
+    protected $casts =  [
+        'dp35002' => 'boolean',
+    ];
 }

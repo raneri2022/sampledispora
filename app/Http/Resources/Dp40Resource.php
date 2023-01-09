@@ -14,6 +14,8 @@ class Dp40Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+//            'do_you_have_relatives_in_eritrea'=>$this->dp40002,
+        ];
     }
 }

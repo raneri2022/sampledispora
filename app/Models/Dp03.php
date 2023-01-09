@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Dp03 extends Model
 {
     use HasFactory;
+    public function countryName(){
+        return $this->hasOne(Country::class, 'id','dp03002');
+    }
+
+    public function stateName(){
+        return $this->hasOne(State::class, 'id','dp03002');
+    }
 }

@@ -14,6 +14,8 @@ class Dp36Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+           return [
+            'property_outside_yes_or_no'=>$this->dp36002,
+        ];
     }
 }

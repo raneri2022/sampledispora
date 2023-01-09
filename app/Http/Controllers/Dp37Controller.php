@@ -6,6 +6,7 @@ use App\Models\Dp37;
 use App\Http\Requests\StoreDp37Request;
 use App\Http\Requests\UpdateDp37Request;
 
+use App\Http\Resources\Dp37Resource;
 class Dp37Controller extends Controller
 {
     /**
@@ -16,6 +17,7 @@ class Dp37Controller extends Controller
     public function index()
     {
         //
+         return Dp37Resource::collection(Dp37::get());
     }
 
     /**

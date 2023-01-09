@@ -14,6 +14,8 @@ class Dp24Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+    return [
+            'employer_name'=>$this->dp24002,
+        ];
     }
 }

@@ -5,6 +5,7 @@ use App\Http\Resources\PersonalIdResource;
 use App\Http\Requests\StorePersonalIdRequest;
 use App\Http\Requests\UpdatePersonalIdRequest;
 use App\Models\PersonalId;
+use Illuminate\Support\Facades\DB;
 
 class PersonalIdController extends Controller
 {
@@ -17,8 +18,8 @@ class PersonalIdController extends Controller
     {
         //
 
-        
-        return PersonalIdResource::collection(PersonalId::all());
+
+        return PersonalIdResource::collection(PersonalId::get());
     }
 
     /**
@@ -38,9 +39,11 @@ class PersonalIdController extends Controller
      * @param  \App\Models\PersonalId  $personalId
      * @return \Illuminate\Http\Response
      */
-    public function show(PersonalId $personalId)
+    public function show($id)
     {
-        //
+
+
+        return PersonalIdResource::collection(PersonalId::where('personal_id','=',$id )->get());
     }
 
     /**

@@ -14,6 +14,8 @@ class Dp34Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+          return [
+            'investment_outside_yes_or_no'=>$this->dp34002,
+        ];
     }
 }

@@ -14,6 +14,8 @@ class Dp31Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+          return [
+            'currently_enrolled_in_name'=>$this->namerefd31002->refd07002,
+        ];
     }
 }

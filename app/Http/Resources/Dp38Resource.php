@@ -14,6 +14,8 @@ class Dp38Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+              return [
+            'changeed_residence_before'=>$this->dp38002,
+        ];
     }
 }

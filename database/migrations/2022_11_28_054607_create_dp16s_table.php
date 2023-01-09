@@ -18,10 +18,11 @@ return new class extends Migration
             $table->id();
             $table->foreignId('personal_id');//personal_id
             $table->foreign('personal_id')->references('personal_id')->on('personal_ids')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('dp16002');// read
-            $table->string('dp16003');// write
-            $table->string('dp16004');// speak
-            $table->string('dp16005');// listen
+            $table->string('dp16002');// language_name
+            $table->string('dp16003');// read
+            $table->string('dp16004');// write
+            $table->string('dp16005');// speak
+            $table->string('dp16006');// listen
             $table->timestamps();
         });
     }

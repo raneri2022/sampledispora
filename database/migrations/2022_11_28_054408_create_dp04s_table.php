@@ -20,8 +20,9 @@ return new class extends Migration
             $table->string('dp04002');//f_mother_name
             $table->string('dp04003');//m_mother_name
             $table->string('dp04004');//l_mother_name
-            $table->string('dp04005');//mother_tongue
-            $table->string('dp04006');//mother_place_origin
+            $table->string('dp04005');//mother_place_origin_country_name
+//            $table->string('dp04006');//mother_place_origin_state_name
+//            $table->string('dp04007');//mother_place_origin_city_name
             $table->timestamps();
         });
     }

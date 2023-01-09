@@ -14,6 +14,8 @@ class Dp18Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+             return [
+            'highest_education_level'=>$this->dp18002,
+        ];
     }
 }

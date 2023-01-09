@@ -14,6 +14,8 @@ class Dp07Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+            return [
+            'possport_id'=>$this->dp07002,
+        ];
     }
 }

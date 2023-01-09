@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreDp27Request;
 use App\Http\Requests\UpdateDp27Request;
 use App\Models\Dp27;
-
+use App\Http\Resources\Dp27Resource;
 class Dp27Controller extends Controller
 {
     /**
@@ -16,6 +16,7 @@ class Dp27Controller extends Controller
     public function index()
     {
         //
+         return Dp27Resource::collection(Dp27::get());
     }
 
     /**

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreDp13Request;
 use App\Http\Requests\UpdateDp13Request;
 use App\Models\Dp13;
+use App\Http\Resources\Dp13Resource;
 
 class Dp13Controller extends Controller
 {
@@ -16,6 +17,7 @@ class Dp13Controller extends Controller
     public function index()
     {
         //
+         return Dp13Resource::collection(Dp13::get());
     }
 
     /**

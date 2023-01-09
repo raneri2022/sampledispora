@@ -14,6 +14,8 @@ class Dp17Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+           return [
+            'enrolled_yes_or_no'=>$this->dp17002,
+        ];
     }
 }

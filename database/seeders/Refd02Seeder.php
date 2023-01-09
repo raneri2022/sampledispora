@@ -16,11 +16,13 @@ class Refd02Seeder extends Seeder
     public function run()
     {
         //
-        Refd02::factory(4)->state(new sequence(
-          ['refd_02002' => "Never Married or Single"],
+        Refd02::factory(5)->state(new sequence(
+          ['refd_02002' => "Single"],
             ['refd_02002' => "Married"],
-            ['refd_02002' => "Divorced or Separated"],
+            ['refd_02002' => "Divorced"],
+            ['refd_02002' => "Separated"],
               ['refd_02002' => "Widowed"],
+              
 
 
         ))->create();

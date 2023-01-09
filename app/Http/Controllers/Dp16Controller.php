@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreDp16Request;
 use App\Http\Requests\UpdateDp16Request;
 use App\Models\Dp16;
-
+use App\Http\Resources\Dp16Resource;
 class Dp16Controller extends Controller
 {
     /**
@@ -16,6 +16,7 @@ class Dp16Controller extends Controller
     public function index()
     {
         //
+         return Dp16Resource::collection(Dp16::get());
     }
 
     /**

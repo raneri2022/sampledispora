@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreDp31Request;
 use App\Http\Requests\UpdateDp31Request;
 use App\Models\Dp31;
-
+use App\Http\Resources\Dp31Resource;
 class Dp31Controller extends Controller
 {
     /**
@@ -16,6 +16,7 @@ class Dp31Controller extends Controller
     public function index()
     {
         //
+         return Dp31Resource::collection(Dp31::get());
     }
 
     /**

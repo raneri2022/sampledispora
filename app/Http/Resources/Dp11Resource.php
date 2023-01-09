@@ -14,6 +14,8 @@ class Dp11Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+             return [
+            'email'=>$this->dp11002,
+        ];
     }
 }

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreDp21Request;
 use App\Http\Requests\UpdateDp21Request;
 use App\Models\Dp21;
-
+use App\Http\Resources\Dp21Resource;
 class Dp21Controller extends Controller
 {
     /**
@@ -16,6 +16,7 @@ class Dp21Controller extends Controller
     public function index()
     {
         //
+         return Dp21Resource::collection(Dp21::get());
     }
 
     /**

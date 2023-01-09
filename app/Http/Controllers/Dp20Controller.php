@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreDp20Request;
 use App\Http\Requests\UpdateDp20Request;
 use App\Models\Dp20;
-
+use App\Http\Resources\Dp20Resource;
 class Dp20Controller extends Controller
 {
     /**
@@ -16,6 +16,7 @@ class Dp20Controller extends Controller
     public function index()
     {
         //
+         return Dp20Resource::collection(Dp20::get());
     }
 
     /**

@@ -14,6 +14,8 @@ class Dp13Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+            return [
+            'language_name'=>$this->dp13002,
+        ];
     }
 }

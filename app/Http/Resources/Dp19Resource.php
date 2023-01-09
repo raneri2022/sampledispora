@@ -14,6 +14,8 @@ class Dp19Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+             return [
+            'highest_education_field_name'=>$this->dp19002,
+        ];
     }
 }

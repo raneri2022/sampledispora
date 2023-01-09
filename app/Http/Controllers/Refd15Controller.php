@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 use App\Http\Resources\Refd15Resource;
 use App\Http\Requests\StoreRefd15Request;
 use App\Http\Requests\UpdateRefd15Request;
+use App\Models\Refd04;
 use App\Models\Refd15;
+use Illuminate\Http\Request;
 
 class Refd15Controller extends Controller
 {
@@ -51,6 +53,17 @@ class Refd15Controller extends Controller
     public function update(UpdateRefd15Request $request, Refd15 $refd15)
     {
         //
+    }
+
+    public function updatedata(Request $request)
+    {
+        $refd_datas = $request->data;
+        foreach ( $refd_datas as  $data){
+            $refd = Refd15::updateOrCreate(
+                ['refd_15002' =>  $data['name']],
+                ['refd_15003' => $data['status']],
+            );
+        }return "true";
     }
 
     /**

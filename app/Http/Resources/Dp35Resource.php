@@ -14,6 +14,8 @@ class Dp35Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+           return [
+            'property_in_yes_or_no'=>$this->dp35002,
+        ];
     }
 }

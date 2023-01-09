@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreDp08Request;
 use App\Http\Requests\UpdateDp08Request;
 use App\Models\Dp08;
+use App\Http\Resources\Dp08Resource;
 
 class Dp08Controller extends Controller
 {
@@ -16,6 +17,7 @@ class Dp08Controller extends Controller
     public function index()
     {
         //
+         return Dp08Resource::collection(Dp08::get());
     }
 
     /**

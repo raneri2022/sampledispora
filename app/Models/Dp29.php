@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Dp29 extends Model
 {
     use HasFactory;
+    public function fname29002(){
+        return $this->belongsTo(Refd13::class, 'dp29002','id');
+    }
 }

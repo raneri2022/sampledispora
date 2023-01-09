@@ -14,6 +14,9 @@ class Dp26Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+           return [
+               'money_income'=>$this->dp26002,
+               'currency'=>$this->dp26003,
+        ];
     }
 }

@@ -14,6 +14,8 @@ class Dp12Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+            return [
+            'emigrated_year'=>$this->dp12002,
+        ];
     }
 }

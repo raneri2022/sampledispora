@@ -14,6 +14,8 @@ class Dp32Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+    return [
+            'skill_yes_or_no'=>$this->dp32002,
+        ];
     }
 }

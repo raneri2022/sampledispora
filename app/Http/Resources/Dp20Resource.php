@@ -14,6 +14,13 @@ class Dp20Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+    return [
+            'number_of_years_learned'=>$this->dp20002,
+            'type_of_eduction'=>$this->dp20003,
+            'graduated_year'=>$this->dp20004,
+            'place_of_eduction'=>$this->dp20005,
+            'certificate'=>$this->fname20006->refd_06002,
+
+        ];
     }
 }

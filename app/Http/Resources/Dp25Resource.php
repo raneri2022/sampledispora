@@ -14,6 +14,8 @@ class Dp25Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+            return [
+            'sector_of_employer_name'=>$this->dp25002,
+        ];
     }
 }

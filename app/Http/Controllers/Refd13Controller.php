@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 use App\Http\Resources\Refd13Resource;
 use App\Http\Requests\StoreRefd13Request;
 use App\Http\Requests\UpdateRefd13Request;
+use App\Models\Refd04;
 use App\Models\Refd13;
+use Illuminate\Http\Request;
 
 class Refd13Controller extends Controller
 {
@@ -52,7 +54,16 @@ class Refd13Controller extends Controller
     {
         //
     }
-
+    public function updatedata(Request $request)
+    {
+        $refd_datas = $request->data;
+        foreach ( $refd_datas as  $data){
+            $refd = Refd13::updateOrCreate(
+                ['refd_13002' =>  $data['name']],
+                ['refd_13003' => $data['status']],
+            );
+        }return "true";
+    }
     /**
      * Remove the specified resource from storage.
      *

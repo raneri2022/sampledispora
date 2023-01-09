@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Dp35;
 use App\Http\Requests\StoreDp35Request;
 use App\Http\Requests\UpdateDp35Request;
+use App\Http\Resources\Dp35Resource;
 
 class Dp35Controller extends Controller
 {
@@ -16,6 +17,7 @@ class Dp35Controller extends Controller
     public function index()
     {
         //
+         return Dp35Resource::collection(Dp35::get());
     }
 
     /**

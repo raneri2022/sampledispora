@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreDp10Request;
 use App\Http\Requests\UpdateDp10Request;
 use App\Models\Dp10;
+use App\Http\Resources\Dp10Resource;
 
 class Dp10Controller extends Controller
 {
@@ -16,6 +17,7 @@ class Dp10Controller extends Controller
     public function index()
     {
         //
+         return Dp10Resource::collection(Dp10::get());
     }
 
     /**

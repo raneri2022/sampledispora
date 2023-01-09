@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreDp22Request;
 use App\Http\Requests\UpdateDp22Request;
 use App\Models\Dp22;
+use App\Http\Resources\Dp22Resource;
 
 class Dp22Controller extends Controller
 {
@@ -16,6 +17,7 @@ class Dp22Controller extends Controller
     public function index()
     {
         //
+         return Dp22Resource::collection(Dp22::get());
     }
 
     /**

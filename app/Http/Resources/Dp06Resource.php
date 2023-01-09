@@ -14,6 +14,8 @@ class Dp06Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+           return [
+            'nationality_id'=>$this->dp06002,
+        ];
     }
 }

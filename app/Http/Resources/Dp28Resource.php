@@ -14,6 +14,11 @@ class Dp28Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+    return [
+            'in_money'=>$this->dp28002,
+            'currency'=>$this->fname28003->refd_17002,
+            'investment_year'=>$this->dp28004,
+            'investment_type'=>$this->fname28005->refd_12002,
+        ];
     }
 }

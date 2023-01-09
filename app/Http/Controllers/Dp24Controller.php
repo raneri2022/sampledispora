@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreDp24Request;
 use App\Http\Requests\UpdateDp24Request;
 use App\Models\Dp24;
-
+use App\Http\Resources\Dp24Resource;
 class Dp24Controller extends Controller
 {
     /**
@@ -16,6 +16,7 @@ class Dp24Controller extends Controller
     public function index()
     {
         //
+         return Dp24Resource::collection(Dp24::get());
     }
 
     /**

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreDp26Request;
 use App\Http\Requests\UpdateDp26Request;
 use App\Models\Dp26;
-
+use App\Http\Resources\Dp26Resource;
 class Dp26Controller extends Controller
 {
     /**
@@ -16,6 +16,7 @@ class Dp26Controller extends Controller
     public function index()
     {
         //
+         return Dp26Resource::collection(Dp26::get());
     }
 
     /**

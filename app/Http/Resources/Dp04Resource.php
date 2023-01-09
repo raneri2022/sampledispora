@@ -14,6 +14,12 @@ class Dp04Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'f_mother_name'=>$this->dp04002,
+            'm_mother_name'=>$this->dp04003,
+            'l_mother_name'=>$this->dp04004,
+            'mother_place_origin'=>$this->countryName->name,
+
+        ];
     }
 }

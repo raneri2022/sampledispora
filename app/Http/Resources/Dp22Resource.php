@@ -14,6 +14,8 @@ class Dp22Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+           return [
+            'employment_type_name'=>$this->dp22002,
+        ];
     }
 }

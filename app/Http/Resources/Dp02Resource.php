@@ -14,6 +14,10 @@ class Dp02Resource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'country_name'=>$this->countryName->name,
+            'state_or_region_name'=>$this->stateName->name,
+            'city_name'=>$this->dp02004,
+        ];
     }
 }
